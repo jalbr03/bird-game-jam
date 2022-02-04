@@ -10,7 +10,7 @@ if(right_wing_is_down) {
 } else {
 	right_wing_rot = lerp(right_wing_rot, max_rot, 0.4);
 }
-var size = sprite_width/2;
+var size = sprite_width/2-10;
 var left_wing_pos = {x: lengthdir_x(size, 180-phy_rotation), y: lengthdir_y(size, 180-phy_rotation)};
 var right_wing_pos = {x: lengthdir_x(size, -phy_rotation), y: lengthdir_y(size, -phy_rotation)};
 
