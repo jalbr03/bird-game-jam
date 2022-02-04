@@ -1,16 +1,10 @@
 {
-  "spriteId": {
-    "name": "spr_floor",
-    "path": "sprites/spr_floor/spr_floor.yy",
-  },
+  "spriteId": null,
   "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "par_static",
-    "path": "objects/par_static/par_static.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": true,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -36,7 +30,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_floor",
+  "name": "par_static",
   "tags": [],
   "resourceType": "GMObject",
 }
