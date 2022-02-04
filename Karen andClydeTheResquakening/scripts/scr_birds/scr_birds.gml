@@ -6,5 +6,6 @@ function make_chain(chain_len, pos, last, other_bird) {
 		physics_joint_revolute_create(inst, last, inst.x, inst.y, 0, 0, 0, 0, 0, 0, 0);
 		last = inst
 	}
+	inst.other_seg = other_bird;
 	physics_joint_revolute_create(inst, other_bird, other_bird.x, other_bird.y, 0, 0, 0, 0, 0, 0, 0);
 }

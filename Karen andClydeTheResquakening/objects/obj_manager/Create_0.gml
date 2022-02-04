@@ -1,0 +1,1 @@
+global.seg_dist = 0;

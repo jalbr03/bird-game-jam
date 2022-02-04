@@ -9,6 +9,5 @@ if(player_number == 0) {
 }
 var move = (right - left)*spd;
 
-if(move)
 
 phy_linear_velocity_x = move;
