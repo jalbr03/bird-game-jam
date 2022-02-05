@@ -6,9 +6,9 @@ flap_timer = 0;
 max_flap_timer = 0.1;
 flap_lerp = 0.2;
 
-left_wing_rot = 0;
-right_wing_rot = 0;
 max_rot = 30;
+left_wing_rot = max_rot*2;
+right_wing_rot = -max_rot*2;
 
 flap_str = 100;
 turn_spd = 50;

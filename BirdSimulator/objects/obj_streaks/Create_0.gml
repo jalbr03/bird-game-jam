@@ -1,0 +1,1 @@
+if(room != rm_start) image_alpha = 0;

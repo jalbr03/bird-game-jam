@@ -1,6 +1,10 @@
 var left_wing = keyboard_check(ord("A"));
 var right_wing = keyboard_check(ord("D"));
-var up_right = keyboard_check(vk_space);
+var up_right = keyboard_check_pressed(vk_space);
+if(global.invert) {
+	var left_wing = keyboard_check(ord("D"));
+	var right_wing = keyboard_check(ord("A"));
+}
 
 if(left_wing) {
 	if(strength > 0) {
@@ -57,12 +61,12 @@ if(!did_flap && game_started) {
 			phy_linear_velocity_y = -flap_str*2;
 			phy_angular_velocity = angle_difference(-phy_rotation, 0);
 		}
+	}
+	
+	if(strength < 1) {
+		strength += recovery_spd;
 	} else {
-		if(strength < 1) {
-			strength += recovery_spd;
-		} else {
-			strength += recovery_spd/2;
-		}
+		strength += recovery_spd/2;
 	}
 }
 if(strength >= 2 || y > room_height) {

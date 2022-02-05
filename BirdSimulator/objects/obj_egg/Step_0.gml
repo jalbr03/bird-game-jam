@@ -6,6 +6,9 @@ if(pos <= 0) {
 	hit += 1;
 	pos = 1;
 }
+if(hit == 0) {
+	image_angle += 2;
+}
 if(hit == 1) {
 	image_angle += 10;
 }

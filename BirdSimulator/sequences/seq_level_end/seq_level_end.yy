@@ -419,7 +419,10 @@
           ],"trackColour":4294068312,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"events":[],"isCreationTrack":false,"resourceVersion":"1.0","name":"spr_wing","tags":[],"resourceType":"GMGraphicTrack","modifiers":[],},
       ],"trackColour":4294068312,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"events":[],"isCreationTrack":false,"resourceVersion":"1.0","name":"spr_bird","tags":[],"resourceType":"GMGraphicTrack","modifiers":[],},
   ],
-  "visibleRange": null,
+  "visibleRange": {
+    "x": 0.0,
+    "y": 599.9999,
+  },
   "lockOrigin": false,
   "showBackdrop": true,
   "showBackdropImage": false,

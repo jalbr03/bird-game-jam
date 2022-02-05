@@ -11,3 +11,10 @@ function particle_type_create(col, size, size_inc, min_spd, max_spd, spd_inc, di
 	part_type_life(particle,min_life,max_life);								//this is its lifespan in steps</pre>
 	return particle;
 }
+
+function spawn_ui(spacing, offset) {
+	var pos = {x: 1920/2, y: 1080/2};
+	for(var i=0; i<array_length(ui_options); i++) {
+		instance_create_layer(pos.x, pos.y+i*spacing-array_length(ui_options)/2*spacing+offset, layer, ui_options[i]);
+	}
+}
