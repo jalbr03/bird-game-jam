@@ -48,6 +48,7 @@
     {"id":{"name":"spr_balcony","path":"sprites/spr_balcony/spr_balcony.yy",},"order":15,},
     {"id":{"name":"spr_cam","path":"sprites/spr_cam/spr_cam.yy",},"order":4,},
     {"id":{"name":"spr_bird","path":"sprites/spr_bird/spr_bird.yy",},"order":0,},
+    {"id":{"name":"snd_wind","path":"sounds/snd_wind/snd_wind.yy",},"order":0,},
     {"id":{"name":"obj_bird","path":"objects/obj_bird/obj_bird.yy",},"order":4,},
     {"id":{"name":"spr_rand","path":"sprites/spr_rand/spr_rand.yy",},"order":6,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":1,},

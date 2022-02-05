@@ -18,3 +18,8 @@ function spawn_ui(spacing, offset) {
 		instance_create_layer(pos.x, pos.y+i*spacing-array_length(ui_options)/2*spacing+offset, layer, ui_options[i]);
 	}
 }
+
+function room_goto_delay(rm, delay) {
+	obj_game_manager.delay_room_goto = rm;
+	obj_game_manager.alarm[0] = delay;
+}

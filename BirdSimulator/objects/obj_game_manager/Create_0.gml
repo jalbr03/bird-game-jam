@@ -14,5 +14,8 @@ global.particle_steam = particle_type_create(c_white, 64, -0.2, 5, 10, -0.01, 90
 
 sequ = noone;
 transition_to = noone;
+delay_room_goto = noone;
 
 ui_options = [obj_resume, obj_audio, obj_invert, obj_back_to_menue];
+
+last_room = room;

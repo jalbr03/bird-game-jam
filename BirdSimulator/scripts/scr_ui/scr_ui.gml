@@ -1,7 +1,10 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ui_start(){
-	room_goto(Room1);
+	obj_falling_egg.grv = obj_falling_egg.trans_grv;
+	obj_falling_egg.vel = obj_falling_egg.trans_vel;
+	
+	room_goto_delay(Room1, room_speed*2);
 }
 
 function ui_invert_controls() {
