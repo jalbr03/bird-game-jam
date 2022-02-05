@@ -5,10 +5,25 @@ function flap(){
 	if(!left_wing_is_down || !right_wing_is_down) {
 		str /= 2;
 	}
-	phy_linear_velocity_x += lengthdir_x(str/2, 90-phy_rotation);
-	phy_linear_velocity_y += lengthdir_y(str/2, 90-phy_rotation)-str/2;
-	var clampx = abs(lengthdir_x(top_spd, 90-phy_rotation));
-	var clampy = abs(lengthdir_y(top_spd, 90-phy_rotation));
-	phy_linear_velocity_x = clamp(phy_linear_velocity_x, -clampx, clampx);
-	phy_linear_velocity_y = clamp(phy_linear_velocity_y, -clampy, clampy);
+	var clampx = lengthdir_x(top_spd, 90-phy_rotation);
+	var clampy = lengthdir_y(top_spd, 90-phy_rotation);
+	
+	var can_flap_x = can_flap(phy_linear_velocity_x, clampx);
+	var can_flap_y = can_flap(phy_linear_velocity_y, clampy);
+	
+	if(can_flap_x) phy_linear_velocity_x += lengthdir_x(str/2, 90-phy_rotation);
+	if(can_flap_y) phy_linear_velocity_y += lengthdir_y(str/2, 90-phy_rotation)-str/2;
+	
+	//phy_linear_velocity_x = clamp(phy_linear_velocity_x, -clampx, clampx);
+	//phy_linear_velocity_y = clamp(phy_linear_velocity_y, -clampy, clampy);
+}
+
+function can_flap(spd, clamp_val) {
+	if(sign(spd) != sign(clamp_val)) {
+		return true;
+		
+	} else if(abs(spd) < abs(clamp_val)) {
+		return true;
+	}
+	return false;
 }

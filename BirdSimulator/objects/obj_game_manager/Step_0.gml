@@ -9,4 +9,12 @@ if(global.death_timer > 0) {
 	global.death_timer = 0;
 }
 
-show_debug_message(global.death_timer);
+if(room == rm_level_transition) {
+	sequ = layer_sequence_get_sequence(seq_level_end);
+}
+if(sequence_exists(sequ)) {
+	show_debug_message(layer_sequence_get_headpos(seq_level_end));
+	if(layer_sequence_get_headpos(seq_level_end) == -1) {
+		room_goto(Room1);
+	}
+}

@@ -1,5 +1,6 @@
 var left_wing = keyboard_check(ord("A"));
 var right_wing = keyboard_check(ord("D"));
+var up_right = keyboard_check(vk_space);
 
 if(left_wing) {
 	if(strength > 0) {
@@ -49,8 +50,13 @@ if(flap_timer > 0) {
 }
 
 if(!did_flap && game_started) {
-	if(abs(phy_linear_velocity_y) < 10 && collision_line(x, y, x, y+sprite_height, par_static, 1, 1) && strength < 1) {
-		strength += recovery_spd*2;
+	if(abs(phy_linear_velocity_y) < 10 && collision_line(x, y, x, y+sprite_height, par_static, 1, 1)) {
+		if(strength < 1) strength += recovery_spd*2;
+		
+		if(up_right) {
+			phy_linear_velocity_y = -flap_str*2;
+			phy_angular_velocity = angle_difference(-phy_rotation, 0);
+		}
 	} else {
 		if(strength < 1) {
 			strength += recovery_spd;

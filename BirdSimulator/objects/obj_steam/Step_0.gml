@@ -1,0 +1,1 @@
+part_particles_create(global.P_System, x, y, global.particle_steam, 1);
