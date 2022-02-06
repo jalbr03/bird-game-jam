@@ -1,0 +1,1 @@
+if(alarm[0] == -1) alarm[0] = random_range(room_speed/4, room_speed)

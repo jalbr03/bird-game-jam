@@ -15,7 +15,7 @@ if(room == rm_start) {
 	}
 } else {
 	if(!instance_exists(obj_audio)) {
-		spawn_ui(192, 160);
+		spawn_ui(192, 80);
 	}
 }
 

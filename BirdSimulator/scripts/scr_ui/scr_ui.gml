@@ -11,6 +11,11 @@ function ui_invert_controls() {
 	global.invert = !global.invert;
 	img_index = global.invert;
 }
+
+function ui_full_screen() {
+	window_set_fullscreen(!window_get_fullscreen());
+}
+
 function ui_invert_controls_create() {
 	img_index = global.invert;
 }

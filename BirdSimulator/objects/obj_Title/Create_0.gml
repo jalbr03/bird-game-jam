@@ -1,0 +1,3 @@
+
+
+text = "Bird Simulator";

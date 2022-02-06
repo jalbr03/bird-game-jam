@@ -65,7 +65,7 @@ if(!did_flap && game_started) {
 	
 	if(strength < 1) {
 		strength += recovery_spd;
-	} else {
+	} else if(room != rm_end) {
 		strength += recovery_spd/2;
 	}
 }
