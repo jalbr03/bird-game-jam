@@ -23,3 +23,9 @@ function room_goto_delay(rm, delay) {
 	obj_game_manager.delay_room_goto = rm;
 	obj_game_manager.alarm[0] = delay;
 }
+
+function paralax(xx, yy, par_amount, par_offsety, par_offsetx) {
+	var offsetx = -((xx/room_width*2)-1)*par_amount.x+par_offsetx;
+	var offsety = -((yy/room_height*2)-1)*par_amount.y+par_offsety;
+	return {x: offsetx, y: offsety};
+}

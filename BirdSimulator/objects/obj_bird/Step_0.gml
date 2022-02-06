@@ -59,7 +59,7 @@ if(!did_flap && game_started) {
 		
 		if(up_right) {
 			phy_linear_velocity_y = -flap_str*2;
-			phy_angular_velocity = angle_difference(-phy_rotation, 0);
+			phy_angular_velocity = angle_difference(-phy_rotation, 0)*10;
 		}
 	}
 	

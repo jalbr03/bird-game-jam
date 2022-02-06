@@ -11,7 +11,7 @@ left_wing_rot = max_rot*2;
 right_wing_rot = -max_rot*2;
 
 flap_str = 100;
-turn_spd = 50;
+turn_spd = 500;
 top_spd = 500;
 
 flap_difficulty = 0.028;

@@ -1,3 +1,5 @@
 if(place_meeting(x, y, obj_bird)) {
-	obj_bird.phy_linear_velocity_y -= (point_distance(obj_bird.x, y, obj_bird.x, obj_bird.y)-sprite_height/2)*scaler;
+	var dist = (point_distance(x, y, obj_bird.x, obj_bird.y)-abs(sprite_height))*scaler;
+	obj_bird.phy_linear_velocity_x += lengthdir_x(dist, image_angle+90);
+	obj_bird.phy_linear_velocity_y -= lengthdir_y(dist, image_angle+90);
 }
