@@ -7,3 +7,6 @@ if(instance_exists(obj_bird)) {
 	
 }
 if(room != starting_room) instance_destroy(self);
+
+
+//if(alarm[0] == -1) alarm[0] = room_speed/2;

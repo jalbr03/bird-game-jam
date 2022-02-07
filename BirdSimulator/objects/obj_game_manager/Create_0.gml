@@ -2,6 +2,8 @@ global.invert = false;
 global.audio = 0;
 global.audio_options = [1, 0.8, 0.5, 0.2, 0];
 global.paused = false;
+audio_gain_offset = 0;
+global.check_point = noone;
 
 global.death_timer = 0;
 did_die = false;

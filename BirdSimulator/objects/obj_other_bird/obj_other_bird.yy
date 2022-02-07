@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_bird",
-    "path": "sprites/spr_bird/spr_bird.yy",
+    "name": "spr_bird_blue",
+    "path": "sprites/spr_bird_blue/spr_bird_blue.yy",
   },
   "solid": true,
   "visible": true,

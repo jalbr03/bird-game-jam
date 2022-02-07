@@ -13,9 +13,18 @@ if(room == rm_start) {
 	if(!audio_is_playing(snd_wind)) {
 		audio_play_sound(snd_wind, 10, 1);
 	}
+	if(!audio_is_playing(snd_music_start)) {
+		audio_play_sound(snd_music_start, 10, 1);
+	}
 } else {
 	if(!instance_exists(obj_audio)) {
 		spawn_ui(192, 80);
+	}
+	if(!audio_is_playing(snd_music_lvl)) {
+		audio_play_sound(snd_music_lvl, 10, 1);
+	}
+	if(!audio_is_playing(snd_bg_sfx)) {
+		audio_play_sound(snd_bg_sfx, 10, 1);
 	}
 }
 
@@ -36,8 +45,17 @@ if(layer_sequence_exists(layer, sequ)) {
 	}
 }
 
-if(room != last_room) {
+if(alarm[0] != -1) {
+	var current = global.audio_options[global.audio];
+	audio_master_gain(current-audio_gain_offset);
+	audio_gain_offset = lerp(audio_gain_offset, current, 0.03);
+}
+
+if(room != last_room && (room == Room1 || room == rm_start)) {
 	audio_stop_all();
+	var current = global.audio_options[global.audio];
+	audio_master_gain(current);
+	global.check_point = noone;
 }
 
 last_room = room;

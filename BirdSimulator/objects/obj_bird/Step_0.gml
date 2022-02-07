@@ -29,6 +29,11 @@ if(right_wing) {
 	right_wing_is_down = false;
 }
 
+if((flap_left || flap_right) && !audio_is_playing(snd_flap)) {
+	audio_sound_pitch(snd_flap, random_range(1, 3));
+	audio_play_sound(snd_flap, 10, 0);
+}
+
 var did_flap = false;
 if(flap_left) {
 	flap_left = false;
@@ -66,7 +71,7 @@ if(!did_flap && game_started) {
 	if(strength < 1) {
 		strength += recovery_spd;
 	} else if(room != rm_end) {
-		strength += recovery_spd/2;
+		strength += recovery_spd/1.5;
 	}
 }
 if(strength >= 2 || y > room_height) {

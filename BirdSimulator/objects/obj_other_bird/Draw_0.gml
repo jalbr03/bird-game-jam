@@ -15,5 +15,5 @@ if(phy_linear_velocity_y < 0) {
 	left_wing_rot = lerp(left_wing_rot, 0, 0.2);
 	right_wing_rot = lerp(right_wing_rot, 0, 0.2);
 }
-draw_sprite_ext(spr_wing, 0, left_wing_pos.x, left_wing_pos.y, 1, -1, left_wing_rot-180+image_angle, c_white, 1);
-draw_sprite_ext(spr_wing, 0, right_wing_pos.x, right_wing_pos.y, 1, 1, right_wing_rot+image_angle, c_white, 1);
+draw_sprite_ext(spr_wing_blue, 0, left_wing_pos.x, left_wing_pos.y, 1, -1, left_wing_rot-180+image_angle, c_white, 1);
+draw_sprite_ext(spr_wing_blue, 0, right_wing_pos.x, right_wing_pos.y, 1, 1, right_wing_rot+image_angle, c_white, 1);
